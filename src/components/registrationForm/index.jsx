@@ -71,7 +71,7 @@ export const Register = () => {
           <input type="button" value="Register" onClick={register} />
 
           <div class="login-register">
-            <p>Already have an account?<a href="login" class="login-link">Login</a></p>
+            <p>Already have an account?<a href="/" class="login-link">Login</a></p>
           </div>
 
         </form>
