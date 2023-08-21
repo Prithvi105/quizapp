@@ -6,12 +6,12 @@ export const Register = () => {
   const [username, setUserName] = useState("");
   const [contact, setContact] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState()
+  const [role, setRole] = useState( )
   
   const register = (e) => {
     e.preventDefault();
     axios.post("https://server-api1-li2k.onrender.com/api/user/add", {
-        username,contact,password,
+        username,contact,password,role,
       }).then((res) => {console.log(res.data);}).catch((err) => {console.log(err.message);}).finally(() => {
         console.log("finally is working");
       });

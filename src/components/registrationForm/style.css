@@ -21,7 +21,7 @@
     justify-content: center;
     align-items: center;
     width: 400px;
-    height: 500px;
+    height: 520px;
     background:transparent;
     border: solid 2px gray;
     border-radius: 20px;
@@ -29,7 +29,6 @@
 
 .form-register h2{
     font-size: 2em;
-    /* margin: 10px; */
     color: #162938;
     text-align: center;
 }
@@ -54,7 +53,8 @@
 }
 
 select{
-    padding: auto;
+    padding: 5px;
+    width: 100%;
     margin-bottom: 50px;
     border-radius: 5px;
     outline: thin;
