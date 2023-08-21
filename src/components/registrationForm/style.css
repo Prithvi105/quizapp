@@ -8,18 +8,10 @@
 .form{
     align-items: center;
     padding: 80px;
-    margin-left: 490px;
-    justify-content: center;
-    box-sizing: border-box;
-  
+    margin-left : 450px;
+    justify-content: center;  
 }
 
-header{
-    width: 100%;
-    padding: 20px 100px;
-    background-color:#162938 ;
-    color: white;
-}
 
 
 .form-register{
@@ -28,7 +20,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width: 400px;
     height: 500px;
     background:transparent;
     border: solid 2px gray;
@@ -37,6 +29,7 @@ header{
 
 .form-register h2{
     font-size: 2em;
+    /* margin: 10px; */
     color: #162938;
     text-align: center;
 }
