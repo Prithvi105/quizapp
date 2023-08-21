@@ -6,7 +6,7 @@ export const Register = () => {
   const [username, setUserName] = useState("");
   const [contact, setContact] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("");
+  const [role, setRole] = useState()
   
   const register = (e) => {
     e.preventDefault();
@@ -57,9 +57,9 @@ export const Register = () => {
           
           <select value={role}
             onChange={(e) => setRole(e.target.value)}>
-            <option value disabled selected>Select Any</option>
+            <option value disabled selected>Select any</option>
             <option value = "faculty">Faculty</option>
-            <option value = "student">Student</option> 
+            <option value = "student">Student</option>
           </select>
 
           <div class="remember-forget">
