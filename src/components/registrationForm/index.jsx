@@ -1,0 +1,73 @@
+import { useState } from "react";
+import "./style.css";
+import axios from "axios";
+
+export const Register = () => {
+  const [username, setUserName] = useState("");
+  const [contact, setContact] = useState("");
+  const [password, setPassword] = useState("");
+
+  const register = (e) => {
+    e.preventDefault();
+    axios.post("https://server-api1-li2k.onrender.com/api/user/add", {
+        username,contact,password,
+      }).then((res) => {console.log(res.data);}).catch((err) => {console.log(err.message);}).finally(() => {
+        console.log("finally is working");
+      });
+  };
+
+  return (
+    <div class="form">
+
+      <div class="form-register ">
+        <h2>Register</h2>
+        <form action="#">
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="username"
+              required
+              value={username}
+              onChange={(e) => setUserName(e.target.value)}
+            />
+          </div>
+
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="contact"
+              pattern="0-9"
+              required
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
+            />
+          </div>
+
+          <div class="input-box">
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          <div class="remember-forget">
+            <label>
+              <input type="checkbox" />I agree to the terms & conditions
+            </label>
+          </div>
+
+          <input type="button" value="Register" onClick={register} />
+
+          <div class="login-register">
+            <p>Already have an account?<a href="login" class="login-link">Login</a></p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  );
+};
