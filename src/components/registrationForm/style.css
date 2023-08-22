@@ -6,10 +6,9 @@
 }
 
 .form{
-    align-items: center;
-    padding: 80px;
-    margin-left : 450px;
-    justify-content: center;  
+   display: flex;
+   padding: 80px;
+   justify-content: center;
 }
 
 

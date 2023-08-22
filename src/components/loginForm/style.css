@@ -6,11 +6,9 @@
 }
 
 .form{
-    align-items: center;
+    display:flex;
     padding: 80px;
-    margin-left: 490px;
     justify-content: center;
-
 }
 
 .form-login{
