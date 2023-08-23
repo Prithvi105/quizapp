@@ -6,8 +6,7 @@ import { Header } from './components/header';
 import QuesForm from './components/faculty/quesForm';
 import QuestionList from './components/faculty/quesList';
 import PageNotFound from './components/pagenotFound';
-import { Switch }
-    from 'react-router-dom'
+
 
 
 
