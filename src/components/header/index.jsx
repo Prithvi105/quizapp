@@ -7,9 +7,9 @@ export const Header = () => {
     <>
     <header>
            <h1><center>Quiz Application</center></h1>
+           <li><Link to= "/quesform">Quiz Form</Link></li>
     </header>
     
-    <li><Link to= "/quesform">Quiz Form</Link></li>
     </>
   )
 }
