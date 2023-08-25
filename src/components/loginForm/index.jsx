@@ -18,7 +18,9 @@ export const Login = () => {
         navigate('/quesForm')
       })
       
-      .catch((err) => {console.log(err.message);})
+      .catch((err) => {console.log(err.message);
+        alert("please enter valid password")
+      })
       .finally(() => {
         console.log("finally is working");
       });
