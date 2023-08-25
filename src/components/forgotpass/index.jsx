@@ -48,6 +48,7 @@ const ForgotPass = () => {
         <Wrapper>
             <div className="main">
             <form>
+            <h1>Change Password</h1>
               <input type="text" name="" id="" placeholder="Contact " value={contact} onChange={ (e) => setContact(e.target.value)}/>
               <input type="password" name="" id="" placeholder="Enter New Password" value ={password} onChange={ (e) => {setPassword(e.target.value)}}/>
               <input type="password" name="" id="" placeholder="Confirm Password" value ={confirmPassword} onChange={ (e) =>{setConfirmPassword(e.target.value)}}/>
