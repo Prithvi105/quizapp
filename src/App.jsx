@@ -9,6 +9,7 @@ import PageNotFound from './components/pagenotFound';
 import './app.css'
 import ForgotPass from './components/forgotpass';
 import Ins from './components/instruct';
+import AttemptQuiz from './components/attemptquiz';
 
 
 
@@ -31,6 +32,7 @@ export const App = () => {
           <Route path = "/questionList" element = {<><Header/><QuestionList questionList={questionList}/></>} />
           <Route path = '/forgotpass' element={ <ForgotPass />} />
           <Route path = '/instruct' element={ <Ins /> } />
+          <Route path ='/attemptquiz' element ={ <AttemptQuiz />} />
           <Route path='/*' element = {<PageNotFound />} />
         </Routes>
       </BrowserRouter>

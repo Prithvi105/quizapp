@@ -20,9 +20,13 @@ const Ins = () => {
 
                     </ul>
                 </div>
+                <div class ="btn" >
+                <input type="button" value="Attempt quiz" />
+                </div>
+                
             </div>
            
-            <input type="button" value="Attempt quiz" />
+            
          </Wrapper>
     )
 }

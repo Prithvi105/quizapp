@@ -17,7 +17,9 @@ export const Wrapper = styled.section`
 .insform{
     margin-left: 20px;
     padding-top: 7px;
-    
+    width:50%;
+    min-width:320px;
+    margin:10px auto;
 
 }
  .insform .inner  h1{
@@ -46,11 +48,16 @@ input[type = button]{
     padding:15px 40px;
     border:none;
     font-weight:bolder;
-    margin-left:40%;
+    margin: 20px auto;
+    display:block;
 }
 
 input[type = button]:hover{
     cursor:pointer;
 
+}
+
+.btn{
+    margin:20px auto;
 }
 `
