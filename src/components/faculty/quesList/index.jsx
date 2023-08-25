@@ -1,11 +1,13 @@
 import React from 'react'
+import { Wrapper } from './style'
 
 const QuestionList = ({questionList}) => {
   return (
-    <div>
+    <Wrapper>
+      <div id='outer'>
       {
         questionList.map((quest) => <div>
-            <div>
+            <div id='que'>
                Question = {quest.question}
             </div>
             <div>
@@ -25,7 +27,8 @@ const QuestionList = ({questionList}) => {
             </div>
         </div>)
         }
-    </div>
+        </div>
+    </Wrapper>
   )
 }
 

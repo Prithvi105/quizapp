@@ -16,20 +16,26 @@ const QuesForm = ({addQuestion}) => {
         navigate("/questionList")
     }
     const add = () => {
-        addQuestion({
-            question : question,
-            optionA : optionA,
-            optionB : optionB,
-            optionC : optionC,
-            optionD : optionD,
-            correctAnswer : correctAnswer
-        })
-        setQuestion('')
-        setOptionA('')
-        setOptionB('')
-        setOptionC('')
-        setOptionD('')
-       // navigate("/questionForm")
+        if(question && optionA && optionB && optionC && optionD && correctAnswer){
+            addQuestion({
+                question : question,
+                optionA : optionA,
+                optionB : optionB,
+                optionC : optionC,
+                optionD : optionD,
+                correctAnswer : correctAnswer
+            })
+            setQuestion('')
+            setOptionA('')
+            setOptionB('')
+            setOptionC('')
+            setOptionD('')
+        }
+        else{
+            alert("You have left any Value Empty Please Fill it then Click on Add Button");
+        }
+        
+    
     }
 
   return (
