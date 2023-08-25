@@ -26,7 +26,7 @@ const ForgotPass = () => {
     const changePass = () => { 
       // console.log(contact)
       users.forEach((user) => {
-        if (user.contact == contact){
+        if (user.contact === contact){
           axios.post('https://quizattendace.onrender.com/api/user/resetPassword',
           {
             contact,

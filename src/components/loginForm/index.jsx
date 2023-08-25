@@ -15,7 +15,11 @@ export const Login = () => {
         contact,password,
       }).then((res) => {
         console.log(res.data);
-        navigate('/quesForm')
+        if (res.data.user.role === 'student'){
+          navigate('/instruct')
+        }
+        else
+          navigate('/quesForm')
       })
       
       .catch((err) => {console.log(err.message);
@@ -25,8 +29,6 @@ export const Login = () => {
         console.log("finally is working");
       });
   };
-
-  // export const Login = () =>
   return (
     <>
         <div class="form">

@@ -8,6 +8,7 @@ import QuestionList from './components/faculty/quesList';
 import PageNotFound from './components/pagenotFound';
 import './app.css'
 import ForgotPass from './components/forgotpass';
+import Ins from './components/instruct';
 
 
 
@@ -24,11 +25,12 @@ export const App = () => {
       <BrowserRouter>
       
         <Routes>
-          <Route path="/quesform" element={<><Header/><QuesForm addQuestion={addQuestion}/></>} />
+          <Route path="/quesForm" element={<><Header/><QuesForm addQuestion={addQuestion}/></>} />
           <Route path="/" element={<Login />} />
           <Route path="/registration" element={<Register />} />
           <Route path = "/questionList" element = {<><Header/><QuestionList questionList={questionList}/></>} />
           <Route path = '/forgotpass' element={ <ForgotPass />} />
+          <Route path = '/instruct' element={ <Ins /> } />
           <Route path='/*' element = {<PageNotFound />} />
         </Routes>
       </BrowserRouter>
