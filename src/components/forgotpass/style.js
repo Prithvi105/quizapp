@@ -13,14 +13,18 @@ form{
     justify-content:center;
 }
 form input{
+    width: 50%;
     display: block;
     margin: 15px auto;
     padding: 5px 15px;
     border-radius:5px;
+    min-width: 200px;
 }
 form input[type = button]{
-    width: 30%;
+    width:40%;
     border:none;
     border-radius:5px;
+    padding: 5px 20px;
+    min-width: 140px;
 }
 `
