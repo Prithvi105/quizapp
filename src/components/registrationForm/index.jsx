@@ -11,14 +11,12 @@ export const Register = () => {
   const navigate = useNavigate();
   const register = (e) => {
     e.preventDefault();
-    axios.post("https://server-api1-li2k.onrender.com/api/user/add", {
+    axios.post("https://quizattendace.onrender.com/api/user/add", {
         username,contact,password,role,
       }).then(
-        (res) => {console.log(res.data);
+        (res) => {console.log(res);
           navigate('/') }
-      
-        )
-      
+      )
       .catch((err) => {console.log(err.message);})
       
       .finally(() => {

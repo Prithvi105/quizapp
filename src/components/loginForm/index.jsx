@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./style.css";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const [contact, setContact] = useState("");
@@ -10,7 +11,7 @@ export const Login = () => {
   const navigate = useNavigate()
   const login = (e) => {
     e.preventDefault();
-    axios.post("https://server-api1-li2k.onrender.com/api/user/login", {
+    axios.post("https://quizattendace.onrender.com/api/user/login", {
         contact,password,
       }).then((res) => {
         console.log(res.data);
@@ -53,7 +54,7 @@ export const Login = () => {
 
                     <div class="remember-forget">
                     <label><input type="checkbox" />Remember me</label>
-                    <a href="/login">Forgot Password?</a>
+                    <Link to='/forgotpass' >Forgot Password?</Link>
                     </div>
 
                     <input 

@@ -37,34 +37,39 @@ const QuesForm = ({addQuestion}) => {
             <form action = "">
               <h1>Add Questions</h1>
                 <input
-                    type='textarea'
+                    type='text'
                     placeholder = "Enter Question"
                     value = {question}
                     onChange = {(e) => setQuestion(e.target.value)} 
+                    required={true}
                 />
                 <input
                     type = "text"
                     placeholder = "option A"
                     value = {optionA}
                     onChange = {(e) => setOptionA(e.target.value)} 
+                    required={true}
                 />
                 <input
                     type = "text"
                     placeholder = "option B"
                     value = {optionB}
                     onChange = {(e) => setOptionB(e.target.value)} 
+                    required={true}
                 />
                 <input
                     type = "text"
                     placeholder = "option C"
                     value = {optionC}
                     onChange = {(e) => setOptionC(e.target.value)} 
+                    required={true}
                 />
                 <input
                     type = "text"
                     placeholder = "option D"
                     value = {optionD}
-                    onChange = {(e) => setOptionD(e.target.value)} 
+                    onChange = {(e) => setOptionD(e.target.value)}
+                    required={true} 
                 />
                 <select name="type"
                     onChange={(e) => {setCorrectAnswer(e.target.value)}}

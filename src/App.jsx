@@ -7,6 +7,7 @@ import QuesForm from './components/faculty/quesForm';
 import QuestionList from './components/faculty/quesList';
 import PageNotFound from './components/pagenotFound';
 import './app.css'
+import ForgotPass from './components/forgotpass';
 
 
 
@@ -27,6 +28,7 @@ export const App = () => {
           <Route path="/" element={<Login />} />
           <Route path="/registration" element={<Register />} />
           <Route path = "/questionList" element = {<><Header/><QuestionList questionList={questionList}/></>} />
+          <Route path = '/forgotpass' element={ <ForgotPass />} />
           <Route path='/*' element = {<PageNotFound />} />
         </Routes>
       </BrowserRouter>
