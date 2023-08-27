@@ -20,18 +20,17 @@ export const App = () => {
       <BrowserRouter>
       
         <Routes>
-          <Route path="/quesForm" element={<><Header/><QuesForm /></>} />
-          <Route path="/" element={<><Header1 /><Login /></>} />
-          <Route path="/registration" element={<><Header1/><Register /></>} />
-          <Route path = "/questionList" element = {<><Header/><QuestionList /></>} />
-          <Route path = '/forgotpass' element={ <ForgotPass />} />
-          <Route path = '/instruct' element={ <Ins /> } />
-          <Route path ='/quiz' element ={ <Quiz />} />
+          <Route path="/quesform" element={<><Header/><QuesForm /><Footer /></>} />
+          <Route path="/" element={<><Header1 /><Login /><Footer /></>} />
+          <Route path="/registration" element={<><Header1/><Register /><Footer /></>} />
+          <Route path = "/questionList" element = {<><Header/><QuestionList /><Footer /></>} />
+          <Route path = '/forgotpass' element={ <><Header1/><ForgotPass /><Footer /></>} />
+          <Route path = '/instruct' element={ <><Header/><Ins /><Footer /></> } />
+          <Route path ='/quiz' element ={<> <Quiz /></>} />
           <Route path = '/selectquiz' element = {<QuizSelection />} />
           <Route path = '/score' element = { <Score />} />
           <Route path='/*' element = {<PageNotFound />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
   );
 }
