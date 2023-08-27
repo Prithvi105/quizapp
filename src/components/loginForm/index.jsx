@@ -15,6 +15,8 @@ export const Login = () => {
         contact,password,
       }).then((res) => {
         console.log(res.data);
+        window.localStorage.setItem("Registered",true)
+        window.localStorage.setItem("UserInfo",JSON.stringify(res.data))
         if (res.data.user.role === 'student'){
           navigate('/instruct')
         }

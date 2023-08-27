@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Login } from './components/loginForm';
 import { Register } from './components/registrationForm';
 import { BrowserRouter , Routes , Route} from 'react-router-dom';
@@ -9,30 +9,24 @@ import PageNotFound from './components/pagenotFound';
 import './app.css'
 import ForgotPass from './components/forgotpass';
 import Ins from './components/instruct';
-import AttemptQuiz from './components/attemptquiz';
-
-
-
+import QuizSelection from './components/selectquiz';
+import Quiz from './components/quiz';
+import Score from './components/score';
 
 export const App = () => {
-
-  const [questionList, setQuestionList] = useState([])
-  const addQuestion = (quest) => {
-    setQuestionList([...questionList, quest])
-  }
-  
-
   return (
       <BrowserRouter>
       
         <Routes>
-          <Route path="/quesForm" element={<><Header/><QuesForm addQuestion={addQuestion}/></>} />
+          <Route path="/quesForm" element={<><Header/><QuesForm /></>} />
           <Route path="/" element={<Login />} />
           <Route path="/registration" element={<Register />} />
-          <Route path = "/questionList" element = {<><Header/><QuestionList questionList={questionList}/></>} />
+          <Route path = "/questionList" element = {<><Header/><QuestionList /></>} />
           <Route path = '/forgotpass' element={ <ForgotPass />} />
           <Route path = '/instruct' element={ <Ins /> } />
-          <Route path ='/attemptquiz' element ={ <AttemptQuiz />} />
+          <Route path ='/quiz' element ={ <Quiz />} />
+          <Route path = '/selectquiz' element = {<QuizSelection />} />
+          <Route path = '/score' element = { <Score />} />
           <Route path='/*' element = {<PageNotFound />} />
         </Routes>
       </BrowserRouter>

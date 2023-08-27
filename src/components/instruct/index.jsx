@@ -1,10 +1,14 @@
 import React from 'react'
 import { Wrapper } from './style'
+import { useNavigate } from 'react-router'
 
 
 const Ins = () => {
+    const navigate = useNavigate()
+    const goToQuizType = () => {
+        navigate('/selectquiz')
+    }
     return (
-        // <input id="head">
        <Wrapper>
             <div class="insform">
                 <div class="inner">
@@ -21,7 +25,7 @@ const Ins = () => {
                     </ul>
                 </div>
                 <div class ="btn" >
-                <input type="button" value="Attempt quiz" />
+                <input type="button" value="Attempt quiz" onClick={goToQuizType}/>
                 </div>
                 
             </div>
