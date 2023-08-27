@@ -6,9 +6,12 @@ const Quiz = () => {
   const [ques, setQues] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showSubmit, setShowSubmit] = useState(false);
+  const [chosenOption, setChosenOption] = useState(-1); // -1 represents no option chosen
+  const [answers, setAnswers] = useState([]);
 
   let subjectId = new URLSearchParams(window.location.search).get('subjectId');
-   const navigate = useNavigate()
+  const navigate = useNavigate();
+
   useEffect(() => {
     axios
       .get('https://quizattendace.onrender.com/api/ques/read')
@@ -28,16 +31,47 @@ const Quiz = () => {
     }
   }, [currentQuestionIndex, ques]);
 
-  const handleNextQuestion = () => {
-    if (currentQuestionIndex < ques.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    }
+  const handleOptionClick = (optionIndex) => {
+    setChosenOption(optionIndex);
   };
 
-  const goToScore = () => {
-    axios.post('')
-    navigate('/score')
-  }
+  const handleNextQuestion = () => {
+    if (chosenOption !== -1) {
+      setAnswers([...answers, { questionId: ques[currentQuestionIndex].id, answerIndex: chosenOption }]);
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setChosenOption(-1); // Reset chosen option
+    }
+    else 
+        alert("Please select an option")
+  };
+
+  const goToScore = (e) => {
+    e.preventDefault();
+    if (chosenOption === -1) {
+      alert('Please select an option');
+    } else {
+      const answerPayload = {};
+      answers.forEach((answer) => {
+        answerPayload[`${answer.questionId}`] = answer.answerIndex;
+      });
+  
+      axios.post('https://quizattendace.onrender.com/api/quiz/evaluate', {
+          title: subjectId,
+          answers: answerPayload,
+        })
+        .then((res) => {
+          console.log(res.data);
+          navigate('/score');
+        })
+        .catch((error) => {
+            console.log(answers)
+            console.log(answerPayload)
+          console.log(error);
+        });
+    }
+  };
+  
+
   const currentQuestion = ques[currentQuestionIndex];
 
   return (
@@ -48,10 +82,17 @@ const Quiz = () => {
           <p>{currentQuestion.ques}</p>
           <form>
             {currentQuestion.ans.map((ans, index) => (
-              <input type="button" key={index} value={ans} />
+                
+              <input
+                key={index}
+                type="button"
+                value={ans}
+                onClick={() => handleOptionClick(index)}
+                style={{ backgroundColor: chosenOption === index ? 'lightblue' : 'black' }}
+              />
             ))}
             {showSubmit ? (
-              <input type="submit" value="Submit" onClick={goToScore}/>
+              <input type="submit" value="Submit" onClick={(e) => goToScore(e)} />
             ) : (
               <input type="button" value="Next" onClick={handleNextQuestion} />
             )}
