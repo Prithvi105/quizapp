@@ -12,6 +12,8 @@ import Ins from './components/instruct';
 import QuizSelection from './components/selectquiz';
 import Quiz from './components/quiz';
 import Score from './components/score';
+import { Header1 } from './components/header1';
+import Footer from './components/footer';
 
 export const App = () => {
   return (
@@ -19,8 +21,8 @@ export const App = () => {
       
         <Routes>
           <Route path="/quesForm" element={<><Header/><QuesForm /></>} />
-          <Route path="/" element={<Login />} />
-          <Route path="/registration" element={<Register />} />
+          <Route path="/" element={<><Header1 /><Login /></>} />
+          <Route path="/registration" element={<><Header1/><Register /></>} />
           <Route path = "/questionList" element = {<><Header/><QuestionList /></>} />
           <Route path = '/forgotpass' element={ <ForgotPass />} />
           <Route path = '/instruct' element={ <Ins /> } />
@@ -29,6 +31,7 @@ export const App = () => {
           <Route path = '/score' element = { <Score />} />
           <Route path='/*' element = {<PageNotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
   );
 }
