@@ -11,7 +11,7 @@ export const Wrapper = styled.section`
     box-sizing: border-box;
 }
 footer{
-    position:absolute;
+    position:relative;
     bottom:0;
     left:0;
     width:100%;
