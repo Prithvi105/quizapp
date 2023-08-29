@@ -11,13 +11,14 @@ export const Wrapper = styled.section`
     box-sizing: border-box;
 }
 footer{
-    position:relative;
+    position:fixed;
     bottom:0;
     left:0;
     width:100%;
     padding: 20px;
     background-color: #162938 ;
     color: white;
+
 }
 `
 

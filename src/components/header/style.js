@@ -13,6 +13,9 @@ export const Wrapper = styled.section`
 }
 
 header{
+    ${'' /* position:absolute; */}
+    top:0;
+    left:0;
     width: 100%;
     padding: 20px;
     background-color:#162938 ;
