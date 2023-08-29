@@ -1,13 +1,14 @@
 import React from 'react'
-import './style.css'
+import { Wrapper } from './style'
 
 const Footer = () => {
   return (
+    <Wrapper>
     <footer>
         <h1><center>Copyright © 2023-SKIT </center></h1>
         
     </footer>
-      
+    </Wrapper>
     
   )
 }

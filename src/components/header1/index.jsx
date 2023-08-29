@@ -1,16 +1,17 @@
 import React from 'react'
-import './style.css'
+import { Wrapper } from './style'
 import { Link } from 'react-router-dom'
 
 export const Header1 = () => {
   return (
     <>
-    <header1>
-           <h1><center>Quiz Application</center></h1>
-           <li><Link to="/loginForm"></Link></li>
-           <li><Link to="/registrationForm"></Link></li>
-    
-    </header1>
+    <Wrapper>
+    <header>
+           <h1><li><Link to="/"><center>Quiz Application</center></Link></li></h1>
+           {/* <li><Link to="/login">Login</Link></li>
+           <li><Link to="/registration">Registration</Link></li> */}
+    </header>
+    </Wrapper>
    </> 
   )
 }

@@ -26,5 +26,8 @@ form input[type = button]{
     border-radius:5px;
     padding: 5px 20px;
     min-width: 140px;
+    background-color:#162938;
+    color:white;
+    font-weight:600;
 }
 `

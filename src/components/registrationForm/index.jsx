@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./style.css";
+import { Wrapper } from "./style";
 import axios from "axios";
 import { useNavigate } from "react-router";
 
@@ -25,6 +25,7 @@ export const Register = () => {
   };
 
   return (
+    <Wrapper>
     <div class="form">
 
       <div class="form-register ">
@@ -85,5 +86,6 @@ export const Register = () => {
       </div>
 
     </div>
+    </Wrapper>
   );
 };

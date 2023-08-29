@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { services } from '../../services';
-import "./style.css";
+import { Wrapper } from './style';
 
 const QuizSelection = () => {
 
@@ -20,6 +20,7 @@ const QuizSelection = () => {
     }
 
     return (
+        <Wrapper>
         <div className='outer'>
             <h1>Choose a Quiz to Attempt:</h1>
             <div className='inner'>
@@ -28,6 +29,8 @@ const QuizSelection = () => {
                 )}
             </div>
         </div>
+        </Wrapper>
+        
     );
 };
 

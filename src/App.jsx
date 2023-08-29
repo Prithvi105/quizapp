@@ -26,8 +26,8 @@ export const App = () => {
           <Route path = "/questionList" element = {<><Header/><QuestionList /><Footer /></>} />
           <Route path = '/forgotpass' element={ <><Header1/><ForgotPass /><Footer /></>} />
           <Route path = '/instruct' element={ <><Header/><Ins /><Footer /></> } />
-          <Route path ='/quiz' element ={<> <Quiz /></>} />
-          <Route path = '/selectquiz' element = {<QuizSelection />} />
+          <Route path ='/quiz' element ={<><Header1 />  <Quiz />  <Footer /></>} />
+          <Route path = '/selectquiz' element = { <><Header1 /> <QuizSelection /> <Footer /></>} />
           <Route path = '/score' element = { <Score />} />
           <Route path='/*' element = {<PageNotFound />} />
         </Routes>

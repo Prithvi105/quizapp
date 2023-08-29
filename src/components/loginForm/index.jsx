@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom";
 import { useState } from "react";
-import "./style.css";
+import { Wrapper } from "./style";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
@@ -32,7 +32,7 @@ export const Login = () => {
       });
   };
   return (
-    <>
+    <Wrapper>
         <div class="form">
 
             <div class="form-login">
@@ -76,7 +76,7 @@ export const Login = () => {
             </div>
             
         </div>
-    </>
+        </Wrapper>
   );
 };
 export default Login;
