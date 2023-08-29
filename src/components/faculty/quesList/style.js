@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
     background-color:#fff;
 }
 
-#outer>div{
+#outer div{
     padding:10px;
 }
 

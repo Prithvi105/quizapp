@@ -14,6 +14,8 @@ import Quiz from './components/quiz';
 import Score from './components/score';
 import { Header1 } from './components/header1';
 import Footer from './components/footer';
+import { Student } from './components/student/index.jsx';
+// import Hamburger from './components/hamburger';
 
 export const App = () => {
   return (
@@ -25,6 +27,8 @@ export const App = () => {
           <Route path="/registration" element={<><Header1/><Register /></>} />
           <Route path = "/questionList" element = {<><Header/><QuestionList /></>} />
           <Route path = '/forgotpass' element={ <ForgotPass />} />
+          <Route path="/student" element={<><Header1/><Student /></>} />
+          
           <Route path = '/instruct' element={ <Ins /> } />
           <Route path ='/quiz' element ={ <Quiz />} />
           <Route path = '/selectquiz' element = {<QuizSelection />} />

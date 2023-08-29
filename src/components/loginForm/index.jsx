@@ -18,7 +18,7 @@ export const Login = () => {
         window.localStorage.setItem("Registered",true)
         window.localStorage.setItem("UserInfo",JSON.stringify(res.data))
         if (res.data.user.role === 'student'){
-          navigate('/instruct')
+          navigate('/student')
         }
         else
           navigate('/quesForm')
