@@ -1,3 +1,10 @@
+import { styled } from "styled-components";
+
+
+
+export const Wrapper = styled.section`
+
+
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +12,7 @@
     box-sizing: border-box;
 }
 
-header1{
+header{
     width: 100%;
     padding: 20px;
     background-color:#162938 ;
@@ -27,4 +34,5 @@ li a{
     color: #fff;
 }
 
+`
 

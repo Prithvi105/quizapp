@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Wrapper } from './style';
 import { useNavigate } from 'react-router';
 
 const Quiz = () => {
@@ -75,6 +76,7 @@ const Quiz = () => {
   const currentQuestion = ques[currentQuestionIndex];
 
   return (
+    <Wrapper>
     <div>
       {currentQuestion && (
         <div key={currentQuestion.id}>
@@ -94,12 +96,13 @@ const Quiz = () => {
             {showSubmit ? (
               <input type="submit" value="Submit" onClick={(e) => goToScore(e)} />
             ) : (
-              <input type="button" value="Next" onClick={handleNextQuestion} />
+              <input type="btn" value="Next" onClick={handleNextQuestion} />
             )}
           </form>
         </div>
       )}
     </div>
+    </Wrapper>
   );
 };
 

@@ -1,40 +1,47 @@
- *{
+import { styled } from "styled-components";
+
+
+
+export const Wrapper = styled.section`
+
+*{
     margin: 0;
     padding: 0;
     font-family:Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
+form{
+    background-color: #fff;
+}
 .form{
-    display:flex;
-    padding: 20px;
-    justify-content: center;
-    background-color:#D1E9EA;
+   display: flex;
+   padding: 20px;
+   justify-content: center;
+   
 }
 
-form {
-    padding: 15px;
-}
-.form-login{
+
+
+.form-register{
     position: relative;
     display: flex;
-    padding: 10px;
+    padding: 25px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 40%;
     min-width: 320px;
-    height: 70vh;
+    min-height: 70vh;
     border: solid 2px gray;
     border-radius: 20px;
     background-color: #fff;
 }
 
-.form-login h2{
+.form-register h2{
     font-size: 2em;
     color: #162938;
     text-align: center;
-    
 }
 
 .input-box{
@@ -54,6 +61,17 @@ form {
     color: #162938;
     font-weight: 600; 
     padding: 0 35px 0 5px;
+}
+
+select{
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    outline: thin;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
 }
 
 .remember-forget{
@@ -108,3 +126,7 @@ form input[type=button]{
 .login-register p a:hover{
     text-decoration: underline;
 }
+`
+
+
+

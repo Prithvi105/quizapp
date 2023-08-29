@@ -20,6 +20,8 @@ export const Wrapper = styled.section`
     width:50%;
     min-width:320px;
     margin:10px auto;
+    min-height:30vh;
+    height:75vh;
 
 }
  .insform .inner  h1{

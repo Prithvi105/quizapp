@@ -22,6 +22,7 @@ export const App = () => {
       <BrowserRouter>
       
         <Routes>
+<<<<<<< HEAD
           <Route path="/quesForm" element={<><Header/><QuesForm /></>} />
           <Route path="/" element={<><Header1 /><Login /></>} />
           <Route path="/registration" element={<><Header1/><Register /></>} />
@@ -32,10 +33,19 @@ export const App = () => {
           <Route path = '/instruct' element={ <Ins /> } />
           <Route path ='/quiz' element ={ <Quiz />} />
           <Route path = '/selectquiz' element = {<QuizSelection />} />
+=======
+          <Route path="/quesform" element={<><Header/><QuesForm /><Footer /></>} />
+          <Route path="/" element={<><Header1 /><Login /><Footer /></>} />
+          <Route path="/registration" element={<><Header1/><Register /><Footer /></>} />
+          <Route path = "/questionList" element = {<><Header/><QuestionList /><Footer /></>} />
+          <Route path = '/forgotpass' element={ <><Header1/><ForgotPass /><Footer /></>} />
+          <Route path = '/instruct' element={ <><Header/><Ins /><Footer /></> } />
+          <Route path ='/quiz' element ={<><Header1 />  <Quiz />  <Footer /></>} />
+          <Route path = '/selectquiz' element = { <><Header1 /> <QuizSelection /> <Footer /></>} />
+>>>>>>> 52dc5e3f4d74aafcbce5f63f1f05815ce556938e
           <Route path = '/score' element = { <Score />} />
           <Route path='/*' element = {<PageNotFound />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
   );
 }

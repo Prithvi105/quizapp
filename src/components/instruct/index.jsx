@@ -17,7 +17,6 @@ const Ins = () => {
                 </div>
                 <div class="list">
                     <ul>
-                        <li>Total Questions=5</li>
                         <li>Each question contain 1 mark</li>
                         <li>There is no negative marking</li>
                         <li>Each question contain 4 options</li>
